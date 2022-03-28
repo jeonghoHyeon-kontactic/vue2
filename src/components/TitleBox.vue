@@ -1,9 +1,9 @@
 <template>
-    <div class="title-container">
-        <div class="title-box">
+    <v-row class="title-box">
+        <v-col>
             {{ title }}
-        </div>
-    </div>
+        </v-col>
+    </v-row>
 </template>
 
 <script>
@@ -15,13 +15,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.title-container{
-    .title-box{
-        display: flex;
-        justify-content: center;
-        margin: 0px 10px 0px 10px;
-        font-size: 70px;
-
-    }
+.title-box{
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
 }
 </style>

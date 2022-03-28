@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ReviewView from '../views/ReviewView.vue'
 import MypageView from '../views/MypageView.vue'
+import AnalysisDetail from '../components/review/AnalysisDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -18,10 +19,16 @@ const routes = [
     component: ReviewView
   },
   {
+    path: '/review/:id',
+    name: 'detail',
+    component: AnalysisDetail
+  },
+  {
     path: '/mypage',
     name: 'mypage',
     component: MypageView
   },
+  
 ]
 
 const router = new VueRouter({

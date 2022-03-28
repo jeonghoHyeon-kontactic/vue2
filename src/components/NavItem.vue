@@ -1,5 +1,6 @@
 <template>
     <div>
+        
         <div class="nav-item-box" v-for="i in nav" :key="i.name">
             <router-link class="nav-item-link" :to="i.href">
                 <div class="nav-item">
@@ -16,10 +17,6 @@ export default {
         return{
             nav: [
                 {
-                    name: "Home",
-                    href: "/home"
-                },
-                {
                     name: "Review",
                     href: "/review"
                 },
@@ -27,6 +24,10 @@ export default {
                     name: "Mypage",
                     href: "/mypage"
                 },
+                {
+                    name: "Detail",
+                    href: "/detail"
+                }
             ]
         }
     }

@@ -6,7 +6,7 @@
       md="4"
     >
       <v-menu
-        v-model="menu2"
+        v-model="startDate"
         :close-on-content-click="false"
         :nudge-right="40"
         transition="scale-transition"
@@ -25,7 +25,7 @@
         </template>
         <v-date-picker
           v-model="date"
-          @input="menu2 = false"
+          @input="startDate = false"
         ></v-date-picker>
       </v-menu>
     </v-col>
@@ -36,7 +36,7 @@
       md="4"
     >
       <v-menu
-        v-model="menu2"
+        v-model="endDate"
         :close-on-content-click="false"
         :nudge-right="40"
         transition="scale-transition"
@@ -55,7 +55,7 @@
         </template>
         <v-date-picker
           v-model="date"
-          @input="menu2 = false"
+          @input="endDate = false"
         ></v-date-picker>
       </v-menu>
     </v-col>
@@ -66,12 +66,12 @@
 <script>
 export default {
     data: () => ({
-      date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-      menu: false,
-      modal: false,
-      menu2: false,
+        date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+        menu: false,
+        modal: false,
+        menu2: false,
     }),
-  }
+}
 </script>
 
 <style lang="scss" scoped>

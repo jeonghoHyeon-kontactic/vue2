@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <v-container>
         <title-box title="리뷰 분석" />
         <analysis-search />
         <analysis-list />
-    </div>   
+    </v-container>   
 </template>
 
 <script>
@@ -17,26 +17,24 @@ export default {
         AnalysisSearch,
         AnalysisList,
         TitleBox,
+    },
+    methods:{
+        searchAnalysis(){
+            this.$store.dispatch('review/searchAnalysisList',{
+                pageNum: 1,
+                startDate: "2022-03-10",
+                endDate: "2022-03-19",
+                searchText: ""
+            })
+        }
+    },
+    created(){
+        this.searchAnalysis()
     }
 }
 
 </script>
 
 <style lang="scss" scoped>
-.analysis-container{
-    
-    .analysis-box{
 
-        .title{
-            color: lightgrey;
-            font-size:100px;
-            font-weight: bold;
-        }
-
-        .search{
-
-            
-        }
-    }
-}
 </style>
